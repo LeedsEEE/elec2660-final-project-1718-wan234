@@ -6,18 +6,18 @@
 //  Copyright © 2017 University of Leeds. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RecipeViewController.h"
 
-@interface ViewController ()
+@interface RecipeViewController ()
 
 @end
 
-@implementation ViewController
+@implementation RecipeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    //Change
+    
 }
 
 

@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Recipe View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeViewController" id="BYZ-38-t0r" customClass="RecipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -25,14 +25,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9M-v8-ZeX"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn8-87-94u">
-                                <frame key="frameInset" minX="42" minY="275" width="253" height="86"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Dcv-37-TPN">
+                                <frame key="frameInset" minX="42" minY="399" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66B-5q-rj7">
+                                        <frame key="frameInset" width="52" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gg-Sv-OUQ">
+                                <frame key="frameInset" minX="42" minY="233" width="278" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recipe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66B-5q-rj7">
-                                <frame key="frameInset" minX="42" minY="399" width="288" height="239"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yn8-87-94u">
+                                <frame key="frameInset" minX="42" minY="262" width="278" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,17 +52,17 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yn8-87-94u" firstAttribute="top" secondItem="a9M-v8-ZeX" secondAttribute="bottom" constant="33" id="1br-2t-uNW"/>
-                            <constraint firstItem="a9M-v8-ZeX" firstAttribute="top" secondItem="0Pj-Fp-yrR" secondAttribute="bottom" constant="19" id="GKK-PA-20y"/>
+                            <constraint firstItem="2gg-Sv-OUQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="213" id="0kO-GK-0pQ"/>
+                            <constraint firstItem="yn8-87-94u" firstAttribute="top" secondItem="a9M-v8-ZeX" secondAttribute="bottom" constant="48" id="1br-2t-uNW"/>
+                            <constraint firstItem="a9M-v8-ZeX" firstAttribute="top" secondItem="0Pj-Fp-yrR" secondAttribute="bottom" constant="8" id="GKK-PA-20y"/>
                             <constraint firstItem="a9M-v8-ZeX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="L9A-6P-HnB"/>
-                            <constraint firstItem="a9M-v8-ZeX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="94" id="LAC-7r-iwe"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="66B-5q-rj7" secondAttribute="bottom" constant="29" id="Ts9-MS-wB1"/>
+                            <constraint firstItem="a9M-v8-ZeX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="66" id="LAC-7r-iwe"/>
                             <constraint firstItem="yn8-87-94u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="UhL-dk-wQO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="a9M-v8-ZeX" secondAttribute="trailing" constant="77" id="Zty-qi-cez"/>
-                            <constraint firstItem="yn8-87-94u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="255" id="fhD-dx-HyD"/>
-                            <constraint firstItem="66B-5q-rj7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="gVz-ik-CFQ"/>
+                            <constraint firstItem="yn8-87-94u" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="242" id="fhD-dx-HyD"/>
+                            <constraint firstItem="2gg-Sv-OUQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="hxH-e4-k1t"/>
                             <constraint firstItem="0Pj-Fp-yrR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="26" id="uuk-KH-0Fn"/>
-                            <constraint firstItem="0Pj-Fp-yrR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="z00-KZ-LK6"/>
+                            <constraint firstItem="0Pj-Fp-yrR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="z00-KZ-LK6"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -74,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="-2097" y="457"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="RBf-kJ-Q6C">
             <objects>
-                <viewController id="Urc-Bo-Ahc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="Urc-Bo-Ahc" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TjU-dU-Gaw"/>
                         <viewControllerLayoutGuide type="bottom" id="m1q-Mv-eK9"/>
@@ -125,6 +137,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZB-O8-Dp6">
                                 <state key="normal" title="Find recipe !"/>
+                                <connections>
+                                    <segue destination="3rZ-eh-g0h" kind="show" id="sXV-Za-bxF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A2m-8y-BOe">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -171,7 +186,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pwE-ba-zCJ" id="NOl-nl-LdQ">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -207,4 +222,7 @@
             <point key="canvasLocation" x="-386" y="457"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="sXV-Za-bxF"/>
+    </inferredMetricsTieBreakers>
 </document>
