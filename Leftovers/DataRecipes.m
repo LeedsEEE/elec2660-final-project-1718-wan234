@@ -21,12 +21,20 @@ NSString *cheese = @"cheese";
 NSString *butter = @"butter";
 
 
+
+
 - (instancetype)init
 {
+    //tried some things
     SearchViewController *ViewControl = [[SearchViewController alloc] init];
     _theData = ViewControl.ingredient1;
     
+    if ([_theData isEqualToString:@"cheese"]) {
+        [self removeEgg];
+    }
+    
     self = [super init];
+    
     
     if (self) {
         
@@ -40,24 +48,22 @@ NSString *butter = @"butter";
         Omlette.ingredients = [NSString stringWithFormat:@"Ingredients: %@ %@",egg,oil];
         Omlette.steps = @"1.Heat the pan and pour oil. \n 2.put egg. \n 3. heat till cook";
         Omlette.image = @"omlette.jpeg";
+        Omlette.time = @"5 minutes";
         
-        if ([ViewControl.ingredient1 isEqualToString:@"egg"]) {
-            NSLog (@"data passed");
+        //if ([ViewControl.ingredient1 isEqualToString:@"egg"]) {
+            //NSLog (@"data passed");
             [self.TheRecipes addObject:Omlette];
-        }
+        //}
         
 
     
-        
-        
-        
-       
         Recipes *CheeseToasty = [[Recipes alloc] init];
         CheeseToasty.foodname = @"Cheese Toasty";
         CheeseToasty.Description = @" Toast with cheese";
         CheeseToasty.ingredients = [NSString stringWithFormat:@"Ingredients: %@ %@ %@",bread,butter,cheese];
         CheeseToasty.steps = @"1.Spread butter on two slices bread. /n 2.Put it on a pan and toast both sides. /n 3. Put cheese on one of the bread and place the other slice on top of it. /n 4. Heat for a min";
         CheeseToasty.image = @"grilledcheese.jpg";
+        CheeseToasty.time = @"5 minutes";
         
         [self.TheRecipes addObject:CheeseToasty];
         
@@ -104,6 +110,11 @@ NSString *butter = @"butter";
         
     }
     return self;
+}
+
+
+-(void) removeEgg {
+    [self.TheRecipes removeObjectAtIndex:0];
 }
 
 
